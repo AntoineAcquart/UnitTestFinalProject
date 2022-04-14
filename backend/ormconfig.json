@@ -7,19 +7,19 @@
    "database": "unit-test-final-project",
    "keepConnectionAlive": true,
    "synchronize": true,
-   "logging": true,
+   "logging": false,
    "entities": [
-      "build/entities/*.js"
+      "src/entities/*.ts"
    ],
    "migrations": [
-      "build/migrations/*.js"
+      "src/migrations/*.ts"
    ],
    "subscribers": [
-      "build/subscriber/*.js"
+      "src/subscriber/*.ts"
    ],
    "cli": {
-      "entitiesDir": "build/entities",
-      "migrationsDir": "build/migration",
-      "subscribersDir": "build/subscriber"
+      "entitiesDir": "src/entities",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
    }
 }

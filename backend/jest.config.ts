@@ -1,9 +1,11 @@
 import type { Config } from "@jest/types"
 
 const config: Config.InitialOptions = {
-    preset: "ts-jest",
-    testEnvironment: "node",
-    verbose: true,
-    automock: true,
+    testEnvironment: 'node',
+    preset: 'ts-jest',
+    rootDir: 'src',
+    coverageDirectory: 'src',
+    coveragePathIgnorePatterns: ['./migrations'],
+    maxWorkers: 1
 }
 export default config

@@ -40,13 +40,17 @@ export class CartService {
       throw new HttpError(404, "Product not found", error)
     }
 
+    if (!cart.products) cart.products = []
+
+    if (quantity > product.quantity) {
+      throw new HttpError(400, "Not enought quantity available", null)
+    }
+
+    cart.products.push(product)
+
     try {
-      if (!cart.products) cart.products = []
-      product.quantity = quantity
-      cart.products.push(product)
       await cartRepository.save(cart)
     } catch (e) {
-      console.log("update cart error: ", e)
       throw new HttpError(500, "Internal Error", e)
     }
 

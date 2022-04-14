@@ -13,5 +13,14 @@
       "experimentalDecorators": true,
       "skipLibCheck": true,
       "sourceMap": true,
+      "baseUrl": "/",
+      "paths": {
+         "@App/*": [
+            "src/*"
+         ],
+         "lib/*": [
+            "common/*"
+         ]
+      }
    }
 }
