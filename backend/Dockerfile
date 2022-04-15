@@ -18,7 +18,7 @@ COPY . /app/
 
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 8000
 
 # the command that starts our app
 CMD ["node", "./build/index.js"]
