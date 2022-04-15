@@ -42,7 +42,9 @@ export const mockServer = setupServer(
         (req, res, ctx) => {
             return res(
                 ctx.json({
-                    products: [{ "id": 1, "name": "Rick Sanchez", "price": "9,99", "quantity": 30, "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg" }, { "id": 2, "name": "Morty Smith", "price": "20", "quantity": 20, "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg" }, { "id": 3, "name": "Summer Smith", "price": "16.50", "quantity": 0, "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }]
+                    products: [{ "id": 1, "name": "Rick Sanchez", "price": "9,99", "quantity": 30, "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
+                    { "id": 2, "name": "Morty Smith", "price": "20", "quantity": 20, "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg" },
+                    { "id": 3, "name": "Summer Smith", "price": "16.50", "quantity": 0, "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }]
                 }))
         }),
     rest.post(

@@ -25,8 +25,19 @@ describe('App', () => {
     })
 
     it('test button cart', () => {
-
-        cy.get('img').parent().click()
-        cy.get('input').should('have.type', "number")
+        cy.get('img').first().parent().click()
+        cy.get('input').should('have.value', "1")
     })
+
+    it('test button back product', () => {
+        cy.get('div').first().parent().click()
+        cy.get('img').should('have.length', 3)
+    })
+
+    it('test button go to cart', () => {
+        cy.get('div').first().parent().click()
+        cy.get('img').should('have.length', 3)
+    })
+
+
 })

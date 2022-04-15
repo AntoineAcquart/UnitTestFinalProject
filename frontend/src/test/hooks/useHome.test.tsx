@@ -1,5 +1,3 @@
-import { rest } from "msw";
-import { setupServer } from "msw/node";
 import { renderHook, act } from '@testing-library/react-hooks'
 import useHome from "../../hooks/useHome"
 import { mockServer } from "../../mockServer"

@@ -1,10 +1,6 @@
-import { rest } from "msw";
-import { setupServer } from "msw/node";
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { act } from "react-dom/test-utils";
 import ReactDOM from "react-dom";
-import App from '../../App';
 import Home from "../../components/Home";
 import { mockServer } from "../../mockServer";
 

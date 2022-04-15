@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { endpoint, Product } from "../App";
+import { endpoint, Product_ } from "../App";
 
-const useProduct = (product: Product) => {
+const useProduct = (product: Product_) => {
   const [quantity, setQuantity] = useState<number>(1);
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
