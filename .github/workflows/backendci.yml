@@ -9,9 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Checkout
-        run: actions/checkout@master
-
       - name: cd backend
         run: cd backend
 
