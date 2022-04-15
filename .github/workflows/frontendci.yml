@@ -9,26 +9,26 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install
-        run: |
-          cd frontend
-          npm install
+#      - name: Install
+#        run: |
+#          cd frontend
+#          npm install
+#
+#      - name: Build
+#        run: |
+#          cd frontend
+#          npm run build
+#
+#      - name: Test
+#        run:  |
+#          cd frontend
+#          npm test
 
-      - name: Build
-        run: |
-          cd frontend
-          npm run build
-
-      - name: Test
-        run:  |
-          cd frontend
-          npm test
-
-      - name: Cypress Test
-        run:  |
-          cd frontend
-          # npm run cy:run -- --spec "cypress/integration/app.test.ts"
-          - name: Run blog test
+#      - name: Cypress Test
+#        run:  |
+#          cd frontend
+#          # npm run cy:run -- --spec "cypress/integration/app.test.ts"
+#          - name: Run blog test
           
       - name: Cypress Test
         uses: cypress-io/github-action@v2
