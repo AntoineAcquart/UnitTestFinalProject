@@ -14,7 +14,8 @@ services:
 
   backend:
     depends_on: db
-    container_name: backend
+    container_name: 
+      - backend
     build: .
     environment:
       - NODE_ENV=production
