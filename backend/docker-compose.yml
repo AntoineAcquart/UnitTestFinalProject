@@ -16,7 +16,7 @@ services:
     container_name: backend
     image: backend
     build:
-      dockerfile: backend.dockerfile
+      dockerfile: dockerfile
     environment:
       - NODE_ENV=production
     ports:
