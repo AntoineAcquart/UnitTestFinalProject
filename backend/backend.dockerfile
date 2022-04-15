@@ -15,6 +15,7 @@ COPY src /app/src
 
 RUN npm install
 RUN npm run build
+RUN npm test
 
 EXPOSE 3000
 
