@@ -5,8 +5,8 @@ import { Column, Entity, PrimaryGeneratedColumn, Unique } from "typeorm"
 @Unique(["name"])
 export class Product {
 
-    @PrimaryGeneratedColumn("uuid")
-    id: string
+    @PrimaryGeneratedColumn("increment")
+    id: number
 
     @Column()
     @IsNotEmpty()

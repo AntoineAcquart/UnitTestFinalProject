@@ -7,6 +7,7 @@ const useProduct = (product: Product) => {
   const [loading, setLoading] = useState<boolean>(false);
   const addProduct = () => {
     return new Promise((resolve) => {
+      console.log("quantity 2", quantity);
       setLoading(true);
       fetch(`${endpoint}/cart/${product.id}`, {
         headers: {

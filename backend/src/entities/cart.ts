@@ -4,8 +4,8 @@ import { Product } from "./product"
 @Entity()
 export class Cart {
 
-    @PrimaryGeneratedColumn("uuid")
-    id: string
+    @PrimaryGeneratedColumn("increment")
+    id: number
 
     @ManyToMany(() => Product)
     @JoinTable()

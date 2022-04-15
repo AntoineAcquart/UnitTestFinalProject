@@ -35,7 +35,7 @@ export class CartService {
     }
     let product: Product
     try {
-      product = await ProductService.getOne(productId)
+      product = await ProductService.getOne(+productId)
     } catch (error) {
       throw new HttpError(404, "Product not found", error)
     }
@@ -67,13 +67,13 @@ export class CartService {
     }
     let product: Product
     try {
-      product = await ProductService.getOne(productId)
+      product = await ProductService.getOne(+productId)
     } catch (error) {
       throw new HttpError(404, "Product not found", error)
     }
 
     try {
-      cart.products.splice(cart.products.findIndex(p => p.id == productId), 1)
+      cart.products.splice(cart.products.findIndex(p => p.id == +productId), 1)
       await cartRepository.save(cart)
     } catch (e) {
       throw new HttpError(500, "Internal Error", e)

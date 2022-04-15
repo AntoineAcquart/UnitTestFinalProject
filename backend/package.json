@@ -32,6 +32,7 @@
       },
       "scripts": {
             "start": "node build/index.js",
+            "start:dev": "set debug=error && ts-node-dev --respawn --transpile-only ./src/index.ts",
             "build": "tsc -p tsconfig.build.json",
             "watch-node": "nodemon build/index.js",
             "watch-ts": "tsc -w",

@@ -13,7 +13,7 @@ export class ProductService {
     }
   }
 
-  static getOne = async (id: string): Promise<Product> => {
+  static getOne = async (id: number): Promise<Product> => {
     try {
       return await getRepository(Product).findOneOrFail(id)
     } catch (e) {

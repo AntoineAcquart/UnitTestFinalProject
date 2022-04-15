@@ -45,7 +45,7 @@ describe('ProductService', () => {
     it('getOne not found', async () => {
         let error: HttpError
         try {
-            await ProductService.getOne("")
+            await ProductService.getOne(99999999999)
         } catch (e) {
             error = e
         }
