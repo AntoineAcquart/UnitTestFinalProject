@@ -19,7 +19,9 @@ jobs:
         
       - name: Test  
         run: |
-          docker exec backend -w /build/src npm test
+          docker exec backend ls
+          docker exec backend bash -c "cd ./build/src" ; npm test
+#          docker exec backend -w /build/src npm test
           
 #      - name: Install
 #        run: |
