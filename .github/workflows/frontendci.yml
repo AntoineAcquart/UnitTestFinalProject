@@ -1,0 +1,27 @@
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: cd frontend
+
+      - uses: actions/checkout@v2
+
+      - name: Checkout
+        run: actions/checkout@master
+
+      - name: Install
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      - name: Cypress Test
+        run: npm run cy:run
