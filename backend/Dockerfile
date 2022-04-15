@@ -11,6 +11,8 @@ COPY ormconfig.json ./
 
 RUN npm install
 
+RUN npm start
+
 COPY . .
 
 #RUN npm run build
@@ -20,4 +22,4 @@ EXPOSE 8000
 
 # the command that starts our app
 #ENTRYPOINT ["node", "./build/src/index.js"]
-ENTRYPOINT ["ts-node-dev --respawn --transpile-only", "./src/index.ts"]
+ENTRYPOINT ["ts-node-dev", "./src/index.ts"]
