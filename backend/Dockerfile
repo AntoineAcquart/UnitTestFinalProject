@@ -13,9 +13,11 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+#RUN npm run build
+RUN npm start:dev
 
 EXPOSE 8000
 
 # the command that starts our app
-ENTRYPOINT ["node", "./build/src/index.js"]
+#ENTRYPOINT ["node", "./build/src/index.js"]
+ENTRYPOINT ["ts-node-dev --respawn --transpile-only", "./src/index.ts"]
