@@ -29,15 +29,15 @@ describe('App', () => {
         cy.get('input').should('have.value', "1")
     })
 
-    it('test button back product', () => {
-        cy.get('div').first().parent().click()
-        cy.get('img').should('have.length', 3)
-    })
+    // it('test button back product', () => {
+    //     // cy.get('div').last().parent().click()
+    //     // cy.get('img').should('have.length', 3)
+    // })
 
-    it('test button go to cart', () => {
-        cy.get('div').first().parent().click()
-        cy.get('img').should('have.length', 3)
-    })
+    // it('test button go to cart', () => {
+    //     cy.get('div').first().parent().click()
+    //     cy.get('img').should('have.length', 3)
+    // })
 
 
 })
