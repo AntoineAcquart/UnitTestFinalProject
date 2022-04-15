@@ -1,24 +1,36 @@
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - run: cd backend
-
       - uses: actions/checkout@v2
 
-      - name: Checkout
-        run: actions/checkout@master
+      - name: Docker
+        run: |
+          cd backend
+          docker-compose -f docker-compose.yml up --build -d
+          
+      - name: list containers
+        run: docker ps -a
+        
+      - name: Test  
+        run: docker exec backend npm test
+          
+#      - name: Install
+#        run: |
+#          cd backend
+#          npm install
+#
+#      - name: Build
+#         run:  |
+#          cd backend
+#          npm run build
 
-      - name: Install
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Test
-        run: npm test
+#      - name: Test
+#        run:  |
+#          cd backend
+#          npm test

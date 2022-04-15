@@ -1,0 +1,23 @@
+version: "3.1"
+
+services:
+  db:
+    container_name: db
+    image: "postgres:13"
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=unit-test-final-project
+    ports:
+      - "5432:5432"
+
+  backend:
+    depends_on: 
+      - db
+    container_name: backend
+    build: .
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "8000:8000"
