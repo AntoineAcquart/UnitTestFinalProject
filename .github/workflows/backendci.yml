@@ -18,7 +18,8 @@ jobs:
         run: docker ps -a
         
       - name: Test  
-        run: docker exec backend npm test
+        run: |
+          docker exec backend cd ./build/src ; npm test
           
 #      - name: Install
 #        run: |
