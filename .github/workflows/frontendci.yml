@@ -11,6 +11,7 @@ jobs:
 
       - name: Install
         run: |
+          CI=false
           cd frontend
           npm install
 
