@@ -9,17 +9,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install
+      - name: Docker
         run: |
           cd backend
-          npm install
+          docker-compose up --build -d
+          
+#      - name: Install
+#        run: |
+#          cd backend
+#          npm install
+#
+#      - name: Build
+#         run:  |
+#          cd backend
+#          npm run build
 
-      - name: Build
-        run:  |
-          cd backend
-          npm run build
-
-      - name: Test
-        run:  |
-          cd backend
-          npm test
+#      - name: Test
+#        run:  |
+#          cd backend
+#          npm test
