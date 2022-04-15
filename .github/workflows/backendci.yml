@@ -12,7 +12,7 @@ jobs:
       - name: Docker
         run: |
           cd backend
-          docker-compose up --build -d
+          docker-compose -f docker-compose.yml up --build -d
           
 #      - name: Install
 #        run: |
