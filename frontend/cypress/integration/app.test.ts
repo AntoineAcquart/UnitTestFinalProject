@@ -25,58 +25,8 @@ describe('App', () => {
     })
 
     it('test button cart', () => {
-        //cy.wait(['@getCart']).then(() => {
 
-        // cy.get('img').parent().click()
-
-        //     ('have.length', 3)
-        //})
+        cy.get('img').parent().click()
+        cy.get('input').should('have.type', "number")
     })
-    // it('addition', () => {
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="+"]').click()
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="="]').click()
-    //     cy.get('.result').should('have.text', '4')
-    // })
-
-    // it('substraction', () => {
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="-"]').click()
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="="]').click()
-    //     cy.get('.result').should('have.text', '0')
-    // })
-
-    // it('multiplication', () => {
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="*"]').click()
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="="]').click()
-    //     cy.get('.result').should('have.text', '4')
-    // })
-
-    // it('division', () => {
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="/"]').click()
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="="]').click()
-    //     cy.get('.result').should('have.text', '1')
-    // })
-
-    // it('modulo', () => {
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="%"]').click()
-    //     cy.get('.touch[data-value="2"]').click()
-    //     cy.get('.touch[data-value="="]').click()
-    //     cy.get('.result').should('have.text', '0')
-    // })
-
-    // it('square', () => {
-    //     cy.get('.touch[data-value="4"]').click()
-    //     cy.get('.touch[data-value="√x"]').click()
-    //     cy.get('.touch[data-value="="]').click()
-    //     cy.get('.result').should('have.text', '2')
-    // })
-
 })
