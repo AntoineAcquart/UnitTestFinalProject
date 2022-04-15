@@ -13,10 +13,9 @@ services:
       - "5432:5432"
 
   backend:
+    depends_on: db
     container_name: backend
-    image: backend
-    build:
-      dockerfile: dockerfile
+    build: .
     environment:
       - NODE_ENV=production
     ports:
