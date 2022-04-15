@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 #RUN npm run build
-RUN npm start:dev
+#RUN npm start
 
 EXPOSE 8000
 
