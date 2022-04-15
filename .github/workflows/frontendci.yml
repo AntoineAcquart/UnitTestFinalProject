@@ -27,4 +27,4 @@ jobs:
       - name: Cypress Test
         run:  |
           cd frontend
-          npm run cy:run
+          npm run cy:run -- --spec "cypress/integration/app.test.ts"
