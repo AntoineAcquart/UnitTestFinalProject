@@ -14,10 +14,11 @@ jobs:
           cd backend
           docker-compose -f docker-compose.yml up --build -d
           
+      - name: list containers
+        run: docker ps -a
+        
       - name: Test  
-        run: |
-          cd backend
-          docker exec backend npm test
+        run: docker exec backend npm test
           
 #      - name: Install
 #        run: |
