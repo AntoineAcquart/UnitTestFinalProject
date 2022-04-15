@@ -27,4 +27,13 @@ jobs:
       - name: Cypress Test
         run:  |
           cd frontend
-          npm run cy:run -- --spec "cypress/integration/app.test.ts"
+          # npm run cy:run -- --spec "cypress/integration/app.test.ts"
+          - name: Run blog test
+          
+      - name: Cypress Test
+      - uses: cypress-io/github-action@v2
+        with:
+          start: npm start
+          working-directory: frontend
+          wait-on: 'http://localhost:3000'
+          config: baseUrl=https://localhost:3000
