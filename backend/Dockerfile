@@ -1,5 +1,5 @@
 # pull the Node.js Docker image
-FROM node:latest
+FROM node:14
 
 # create the directory inside the container
 WORKDIR /app
@@ -11,9 +11,11 @@ COPY tsconfig.json ./
 
 COPY ormconfig.json ./
 # copy source code to /app/src folder
-COPY src /app/src
 
 RUN npm install
+
+COPY . /app/
+
 RUN npm run build
 RUN npm test
 
