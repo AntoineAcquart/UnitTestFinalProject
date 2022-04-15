@@ -6,15 +6,12 @@ WORKDIR /app
 
 # copy the package.json files from local machine to the workdir in container
 COPY package*.json ./
-
 COPY tsconfig.json ./
-
 COPY ormconfig.json ./
-# copy source code to /app/src folder
 
 RUN npm install
 
-COPY . /app/
+COPY . .
 
 RUN npm run build
 
