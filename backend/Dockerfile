@@ -13,9 +13,10 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+#RUN npm run build
+RUN npm start:dev
 
 EXPOSE 8000
 
 # the command that starts our app
-CMD ["node", "./build/index.js"]
+#CMD ["node", "./build/index.js"]
