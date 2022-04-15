@@ -37,3 +37,18 @@ jobs:
           working-directory: frontend
           wait-on: 'http://localhost:3000'
           config: baseUrl=https://localhost:3000
+          
+      - name: Install
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Test
+        run:  |
+          cd frontend
+          npm test
