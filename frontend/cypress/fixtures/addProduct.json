@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "price": "9,99",
+      "quantity": 30,
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    }
+  ]
+}
