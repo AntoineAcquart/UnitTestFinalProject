@@ -14,10 +14,10 @@ jobs:
           cd frontend
           npm install
 
-#      - name: Build
-#        run: |
-#          cd frontend
-#          npm run build
+      - name: Build
+        run: |
+          cd frontend
+          npm run build
 
       - name: Test
         run:  |
@@ -27,4 +27,4 @@ jobs:
       - name: Cypress Test
         run:  |
           cd frontend
-          npm run cy:run
+          npm run cy:run -- --spec "cypress/integration/app.test.ts"
